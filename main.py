@@ -31,7 +31,7 @@ st.markdown(
 st.image("Dtbezn3nNUxytg04ajX7dx26Klc68gw7qdv5slNuqTasWJ.webp", width=600)
 
 # ตั้งค่าชื่อแอป
-st.title("เว็บแอปพลิเคชันสำหรับการพยากรณ์โรคเบาหวาน")
+st.title("เว็บแอปพลิเคชันพยากรณ์โรคเบาหวาน")
 
 # ส่วนกรอกข้อมูลให้อยู่ตรงกลาง
 with st.container():
