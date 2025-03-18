@@ -65,9 +65,12 @@ if st.button("🔍 ทำนาย", use_container_width=True):
     prediction = model.predict(input_selected)[0]
     prediction_proba = model.predict_proba(input_selected)[0][1]
 
+    # ตั้งค่าความมั่นใจที่ต้องการ
+    confidence_threshold = 0.5  # กำหนดค่าความมั่นใจที่ 50%
+
     # แสดงผลลัพธ์
     st.subheader("🎯 ผลลัพธ์การพยากรณ์")
-    if prediction == 1:
+    if prediction_proba > confidence_threshold:
         st.error(f"🔴 มีแนวโน้มเป็นเบาหวาน (ความมั่นใจ: {prediction_proba:.2f})")
     else:
         st.success(f"🟢 ไม่มีแนวโน้มเป็นเบาหวาน (ความมั่นใจ: {prediction_proba:.2f})")
